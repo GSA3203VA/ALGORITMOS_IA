@@ -1,0 +1,270 @@
+[
+    {
+        "id": "1",
+        "descricao": "Soma simples",
+        "expressao_rpn": "10 17 +",
+        "status": "ok",
+        "tokens": [
+            "10",
+            "17",
+            "+"
+        ],
+        "percurso_pos_ordem": [
+            10,
+            17,
+            "SOMA"
+        ],
+        "resultado": 27,
+        "arvore": {
+            "valor": "SOMA",
+            "tipo": "operador",
+            "esquerda": {
+                "valor": 10,
+                "tipo": "operando",
+                "esquerda": null,
+                "direita": null
+            },
+            "direita": {
+                "valor": 17,
+                "tipo": "operando",
+                "esquerda": null,
+                "direita": null
+            }
+        }
+    },
+    {
+        "id": "2",
+        "descricao": "Divisao simples",
+        "expressao_rpn": "120 5 /",
+        "status": "ok",
+        "tokens": [
+            "120",
+            "5",
+            "/"
+        ],
+        "percurso_pos_ordem": [
+            120,
+            5,
+            "DIVISAO"
+        ],
+        "resultado": 24.0,
+        "arvore": {
+            "valor": "DIVISAO",
+            "tipo": "operador",
+            "esquerda": {
+                "valor": 120,
+                "tipo": "operando",
+                "esquerda": null,
+                "direita": null
+            },
+            "direita": {
+                "valor": 5,
+                "tipo": "operando",
+                "esquerda": null,
+                "direita": null
+            }
+        }
+    },
+    {
+        "id": "3",
+        "descricao": "Multiplicacao simples",
+        "expressao_rpn": "15 15 *",
+        "status": "ok",
+        "tokens": [
+            "15",
+            "15",
+            "*"
+        ],
+        "percurso_pos_ordem": [
+            15,
+            15,
+            "MULTIPLICACAO"
+        ],
+        "resultado": 225,
+        "arvore": {
+            "valor": "MULTIPLICACAO",
+            "tipo": "operador",
+            "esquerda": {
+                "valor": 15,
+                "tipo": "operando",
+                "esquerda": null,
+                "direita": null
+            },
+            "direita": {
+                "valor": 15,
+                "tipo": "operando",
+                "esquerda": null,
+                "direita": null
+            }
+        }
+    },
+    {
+        "id": "4",
+        "descricao": "Subtracao simples",
+        "expressao_rpn": "517 17 -",
+        "status": "ok",
+        "tokens": [
+            "517",
+            "17",
+            "-"
+        ],
+        "percurso_pos_ordem": [
+            517,
+            17,
+            "SUBTRACAO"
+        ],
+        "resultado": 500,
+        "arvore": {
+            "valor": "SUBTRACAO",
+            "tipo": "operador",
+            "esquerda": {
+                "valor": 517,
+                "tipo": "operando",
+                "esquerda": null,
+                "direita": null
+            },
+            "direita": {
+                "valor": 17,
+                "tipo": "operando",
+                "esquerda": null,
+                "direita": null
+            }
+        }
+    },
+    {
+        "id": "5",
+        "descricao": "Expressao composta",
+        "expressao_rpn": "10 17 + 120 5 / +",
+        "status": "ok",
+        "tokens": [
+            "10",
+            "17",
+            "+",
+            "120",
+            "5",
+            "/",
+            "+"
+        ],
+        "percurso_pos_ordem": [
+            10,
+            17,
+            "SOMA",
+            120,
+            5,
+            "DIVISAO",
+            "SOMA"
+        ],
+        "resultado": 51.0,
+        "arvore": {
+            "valor": "SOMA",
+            "tipo": "operador",
+            "esquerda": {
+                "valor": "SOMA",
+                "tipo": "operador",
+                "esquerda": {
+                    "valor": 10,
+                    "tipo": "operando",
+                    "esquerda": null,
+                    "direita": null
+                },
+                "direita": {
+                    "valor": 17,
+                    "tipo": "operando",
+                    "esquerda": null,
+                    "direita": null
+                }
+            },
+            "direita": {
+                "valor": "DIVISAO",
+                "tipo": "operador",
+                "esquerda": {
+                    "valor": 120,
+                    "tipo": "operando",
+                    "esquerda": null,
+                    "direita": null
+                },
+                "direita": {
+                    "valor": 5,
+                    "tipo": "operando",
+                    "esquerda": null,
+                    "direita": null
+                }
+            }
+        }
+    },
+    {
+        "id": "6",
+        "descricao": "Expressao com quatro operacoes",
+        "expressao_rpn": "5 1 2 + 4 * + 3 -",
+        "status": "ok",
+        "tokens": [
+            "5",
+            "1",
+            "2",
+            "+",
+            "4",
+            "*",
+            "+",
+            "3",
+            "-"
+        ],
+        "percurso_pos_ordem": [
+            5,
+            1,
+            2,
+            "SOMA",
+            4,
+            "MULTIPLICACAO",
+            "SOMA",
+            3,
+            "SUBTRACAO"
+        ],
+        "resultado": 14,
+        "arvore": {
+            "valor": "SUBTRACAO",
+            "tipo": "operador",
+            "esquerda": {
+                "valor": "SOMA",
+                "tipo": "operador",
+                "esquerda": {
+                    "valor": 5,
+                    "tipo": "operando",
+                    "esquerda": null,
+                    "direita": null
+                },
+                "direita": {
+                    "valor": "MULTIPLICACAO",
+                    "tipo": "operador",
+                    "esquerda": {
+                        "valor": "SOMA",
+                        "tipo": "operador",
+                        "esquerda": {
+                            "valor": 1,
+                            "tipo": "operando",
+                            "esquerda": null,
+                            "direita": null
+                        },
+                        "direita": {
+                            "valor": 2,
+                            "tipo": "operando",
+                            "esquerda": null,
+                            "direita": null
+                        }
+                    },
+                    "direita": {
+                        "valor": 4,
+                        "tipo": "operando",
+                        "esquerda": null,
+                        "direita": null
+                    }
+                }
+            },
+            "direita": {
+                "valor": 3,
+                "tipo": "operando",
+                "esquerda": null,
+                "direita": null
+            }
+        }
+    }
+]
