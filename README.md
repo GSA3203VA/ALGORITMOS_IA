@@ -28,7 +28,7 @@ ALGORITMOS_IA/
 │   │   ├── AULAS/
 │   │   │   ├── AULA01_FUNDAMENTOS/
 │   │   │   │   ├── Dados/               # Base de dados das aulas
-│   │   │   │   ├── Docs/                #Roteiro.md
+│   │   │   │   ├── Docs/                # Roteiros.md
 │   │   │   │   ├── Notebooks/           # Arquivos .ipynb
 │   │   │   │   ├── Resultados/          #Arquivos de saídas
 │   │   │   │   └── Src/                 # Arquivos em .py 
@@ -40,9 +40,10 @@ ALGORITMOS_IA/
 │   │   ├── DADOS/
 │   │   ├── EXEMPLOS_HTML/
 │   │   └── NOTEBOOKS/
-│
-├── TESE_IA/              # Estudos e materiais relacionados à tese
-├── CONVETER/             # Arquivos auxiliares ou ferramentas de conversão
+│   |
+├── TESE_IA/COMBUSTAO      # Estudos e materiais relacionados à tese
+├── CONVETER/              # Rotinas de conversões
+|── DOUTORADO             # Rotinas do curso com a base de dados E6                           
 ├── GitHub.ipynb          # Notebook com estudos sobre GitHub
 ├── requirements.txt      # Bibliotecas necessárias ao projeto
 ├── .gitignore            # Arquivos e pastas ignorados pelo Git
