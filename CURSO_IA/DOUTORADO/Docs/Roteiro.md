@@ -3,7 +3,7 @@ A pasta "C:\Users\GSA\Workspace\ALGORITMOS_IA\CURSO_IA\DOUTORADO" contém todos 
 
 # Tarefas
 Usando a base de dados Resultados_H2.csv escrever codigos:
-1 para de análise de EDA conforma material da ADEC_ANALISE_DADOS_BALBINOT, usando o resumo AMCLASS.md conforme a Tarefa_ADEC.md
+1 para de análise de EDA conforma material da ADEC_ANALISE_DADOS_BALBINOT, usando o resumo AMCLASS.md conforme a Tarefa_ADEC.md.
 2 Complementar o codigo da Tarefa_ADEC.md com o roteiro de Tarefa_Cluster.md.
 3 Complentar com o roteiro da Tarefa_AMCLASS.md.
 
