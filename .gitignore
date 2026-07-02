@@ -1,45 +1,56 @@
-# Ambiente virtual Python
+# ==============================================================================
+# AMBIENTE VIRTUAL E CACHE PYTHON
+# ==============================================================================
 .venv/
 venv/
 env/
-
-# Cache Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Jupyter Notebook
+# ==============================================================================
+# FERRAMENTAS E JUPYTER NOTEBOOK
+# ==============================================================================
 .ipynb_checkpoints/
-
-# Configurações locais do VSCode
-.vscode/settings.json
-
-# Arquivos de ambiente/senhas
-.env
-
-# Resultados gerados automaticamente
-RESULTADOS/
-
-# Cache de ferramentas
 .mypy_cache/
 .pytest_cache/
+.vscode/settings.json
 
-# Arquivos temporários
-*.log
-*.tmp
-
-# Credenciais e senhas
+# ==============================================================================
+# SEGURANÇA (CREDENCIAIS E CHAVES)
+# ==============================================================================
 .env
 secrets.json
 credentials.json
 token.json
 
-# Dados grandes ou sensíveis
-dados_grandes/
-dados_sensiveis/
+# ==============================================================================
+# DADOS PESADOS (ESPECÍFICO DO SEU PROJETO)
+# ==============================================================================
+# Ignora a pasta de dados brutos inteira 
+**dados_brutos/
+**dados_brutos/
+**resultados/
 
-# Materiais de aula em PDF, se não quiser enviar materiais_aula e dados
-*.pdf
-*.csv
+# Ignora os outputs gerados automaticamente para não inflar o GitHub
 *.dat
+*.csv
+
+# Arquivos temporários e logs
+*.log
+*.tmp
+
+# Garante que as amostras leves para os agentes SEJAM lidas
+!**/dados_amostra/*.csv
+
+# ==============================================================================
+# REGRAS PARA MATERIAIS E ARQUIVOS GLOBAIS
+# ==============================================================================
+*.pdf
+
+# Em vez de bloquear todos os .csv do projeto, bloqueamos apenas o que estiver 
+# solto ou fora da pasta de amostras. Como já ignoramos a pasta 'Dados_Brutos/',
+# a regra abaixo garante que arquivos perdidos na raiz não subam.
+# A pasta 'dados_amostra/' continuará sendo rastreada normalmente.
+# *.dat
