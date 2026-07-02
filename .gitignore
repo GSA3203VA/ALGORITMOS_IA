@@ -28,9 +28,8 @@ token.json
 # ==============================================================================
 # DADOS PESADOS (ESPECÍFICO DO SEU PROJETO)
 # ==============================================================================
-# Ignora a pasta de dados brutos inteira 
-**dados_brutos/
-**dados_brutos/
+# Ignora a pasta de dados brutos inteira
+**dados_bruto/
 **resultados/
 
 # Ignora os outputs gerados automaticamente para não inflar o GitHub
@@ -50,7 +49,7 @@ token.json
 *.pdf
 
 # Em vez de bloquear todos os .csv do projeto, bloqueamos apenas o que estiver 
-# solto ou fora da pasta de amostras. Como já ignoramos a pasta 'Dados_Brutos/',
+# solto ou fora da pasta de amostras. Como já ignoramos a pasta 'dados_bruto/',
 # a regra abaixo garante que arquivos perdidos na raiz não subam.
 # A pasta 'dados_amostra/' continuará sendo rastreada normalmente.
 # *.dat
