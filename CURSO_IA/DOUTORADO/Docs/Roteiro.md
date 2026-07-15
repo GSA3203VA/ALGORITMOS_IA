@@ -2,18 +2,13 @@
 A pasta "C:\Users\GSA\Workspace\ALGORITMOS_IA\CURSO_IA\DOUTORADO" contém todos os inputs para realizar a execução dos codigos.
 
 # Tarefas
-Usando a base de dados Resultados_H2.csv escrever codigos:
-1 para de análise de EDA conforma material da ADEC_ANALISE_DADOS_BALBINOT, usando o resumo AMCLASS.md conforme a Tarefa_ADEC.md.
-2 Complementar o codigo da Tarefa_ADEC.md com o roteiro de Tarefa_Cluster.md.
-3 Complentar com o roteiro da Tarefa_AMCLASS.md.
-
+Usando a base de dados results_hydrogen.csv escrever os codigos:
+1. para analisar das features do results_hydrogen.csv.csv;
+2. continuar aplicando uma análise de EDA, usando o resumo_adec.md para atender o roteiro da tarefa_adec.md;
+3. Complementar o codigo com métodos de clusterização, usando resumo_amclass.md para atender o roteiro da tarefa_cluster.md;
 
 # Base de dados
-O arquivo Resultados_H2.csv contem a base de dados.
-
-# Legenda das Features
-O arquivo .md possui a legenda e o siinificado físico das features (características).
-
+O arquivo results_hydrogen.csv contem a base de dados.
 
 # Material para seguir
 O material com exemplos estão nas pastas:

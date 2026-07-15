@@ -1,0 +1,10 @@
+# Normaliza arquivos de texto
+* text=auto
+
+# Código Python e arquivos do projeto sempre com LF
+*.py   text eol=lf
+*.ipynb text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
