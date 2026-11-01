@@ -14,9 +14,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
-RICARDO_MD = ROOT_DIR / "docs" / "ricardo.md"
-OUT_PATH = ROOT_DIR / "docs" / "Tabela_Features_Hydrogen_v2.pdf"
+from caminhos import DOCS_DIR, RESULTADOS_DIR
+
+RICARDO_MD = DOCS_DIR / "ricardo.md"
+OUT_PATH = RESULTADOS_DIR / "Tabela_Features_Hydrogen_v2.pdf"
 
 NAVY = "#1f2a44"
 BLUE = "#2f6fed"

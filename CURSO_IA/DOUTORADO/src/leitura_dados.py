@@ -14,9 +14,11 @@ import re
 import pandas as pd
 
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
-DATA_PATH = ROOT_DIR / "Dados" / "Resultados_H2.csv"
-LEGEND_PATH = ROOT_DIR / "Docs" / "Legenda_Features.md"
+from caminhos import DADOS_BRUTO_DIR, DOCS_DIR
+
+
+DATA_PATH = DADOS_BRUTO_DIR / "Resultados_H2.csv"
+LEGEND_PATH = DOCS_DIR / "Legenda_Features.md"
 
 CSV_ENCODING = "cp850"
 LEGEND_ENCODING = "utf-8"
