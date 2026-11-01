@@ -25,16 +25,24 @@ secrets.json
 credentials.json
 token.json
 
+# Material confidencial - Processo Administrativo Disciplinar
+PAD/
+**/PAD/
+
 # ==============================================================================
 # DADOS PESADOS (ESPECÍFICO DO SEU PROJETO)
 # ==============================================================================
-# Ignora a pasta de dados brutos inteira
-**dados_bruto/
-**resultados/
+# Ignora as pastas de dados brutos inteiras (as duas grafias usadas no projeto)
+**/dados_bruto/
+**/dados_brutos/
+**/resultados/
 
 # Ignora os outputs gerados automaticamente para não inflar o GitHub
 *.dat
-*.csv
+
+# CSV experimentais: ignorados apenas no DOUTORADO (os CSV dos exercícios de
+# CURSO_IA continuam rastreáveis)
+CURSO_IA/DOUTORADO/**/*.csv
 
 # Arquivos temporários e logs
 *.log

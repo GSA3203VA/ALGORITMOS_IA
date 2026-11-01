@@ -8,7 +8,7 @@ O arquivo possui tres blocos de cabecalho/dados:
 Este script NAO altera, filtra nem limpa o CSV original. Ele apenas
 extrai metadados de cada coluna (posicao, nome, unidade, tipo inferido)
 e imprime um relatorio de validacao no terminal, alem de gerar a tabela
-markdown usada em Docs/ricardo.md.
+markdown usada em docs/ricardo.md.
 
 Nao inventa unidades: quando a linha 2 esta vazia para uma coluna, a
 unidade e reportada como ausente, mesmo que fisicamente exista uma
@@ -22,11 +22,11 @@ from pathlib import Path
 
 import pandas as pd
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT_DIR / "dados_amostra"
+from caminhos import DADOS_AMOSTRA_DIR, DOCS_DIR
+
+DATA_DIR = DADOS_AMOSTRA_DIR
 CSV_PATH = DATA_DIR / "results_hydrogen_v2.csv"
 XLSX_PATH = DATA_DIR / "results_hydrogen_v2.xlsx"
-DOCS_DIR = ROOT_DIR / "Docs"
 
 CSV_ENCODING = "utf-8-sig"
 CSV_SEPARATOR = ";"
@@ -187,7 +187,7 @@ def imprimir_relatorio(relatorio: RelatorioInspecao, dados_preview: pd.DataFrame
     with pd.option_context("display.max_columns", 8, "display.width", 160):
         print(dados_preview.head(5).iloc[:, :8].to_string(index=False, header=False))
     print(f"(exibindo apenas as 8 primeiras das {relatorio.total_colunas} colunas; "
-          f"veja Docs/ricardo.md para a lista completa)")
+          f"veja docs/ricardo.md para a lista completa)")
 
     print()
     print("=" * 78)

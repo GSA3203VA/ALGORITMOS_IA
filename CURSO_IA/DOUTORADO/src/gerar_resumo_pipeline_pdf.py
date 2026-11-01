@@ -15,8 +15,9 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
-OUT_PATH = ROOT_DIR / "docs" / "Resumo_Pipeline_Doutorado.pdf"
+from caminhos import RESULTADOS_DIR
+
+OUT_PATH = RESULTADOS_DIR / "Resumo_Pipeline_Doutorado.pdf"
 
 NAVY = "#1f2a44"
 BLUE = "#2f6fed"
@@ -61,7 +62,7 @@ def pagina_diagrama(pdf: PdfPages) -> None:
     # Linha 1 - dados
     b1_bottom, b1_top, b1_left, b1_right = box(
         ax, (0.3, 5.3), 2.6, 1.3,
-        "dados_bruto(s)/", "Dados originais e pesados\n(não versionados, não lidos)",
+        "dados_bruto/", "Dados originais e pesados\n(não versionados, não lidos)",
         face="#fdeee8", edge=ACCENT)
     b2_bottom, b2_top, b2_left, b2_right = box(
         ax, (3.4, 5.3), 2.6, 1.3,
@@ -106,7 +107,7 @@ def pagina_diagrama(pdf: PdfPages) -> None:
     arrow(ax, (b6_bottom[0], b6_bottom[1]), (b9_top[0], b9_top[1]))
 
     fig.text(0.5, 0.03,
-              "Regra do projeto: scripts/notebooks só leem dados_amostra/ e docs/ — dados_bruto(s)/ nunca é lido diretamente.",
+              "Regra do projeto: scripts/notebooks só leem dados_amostra/ e docs/ — dados_bruto/ nunca é lido diretamente.",
               ha="center", fontsize=8, color=GRAY, style="italic")
 
     pdf.savefig(fig)
@@ -122,7 +123,7 @@ def pagina_resumo(pdf: PdfPages) -> None:
               fontweight="bold", color=NAVY)
 
     itens = [
-        ("dados_bruto/ e dados_brutos/",
+        ("dados_bruto/",
          "Dados originais e pesados do projeto. Ficam fora do Git (.gitignore) e nunca são lidos "
          "diretamente pelos scripts — apenas documentados (README.md, imagem Waterfall_Pressão)."),
         ("dados_amostra/",
